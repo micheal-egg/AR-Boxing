@@ -13,13 +13,12 @@
       <!-- Top UI -->
       <header class="topbar">
         <div class="app-title">🥊 Boxing Gloves AR</div>
-        <div class="app-status">Idle</div>
+        <div class="app-status" id="status">Idle</div>
       </header>
 
       <!-- AR Stage -->
       <section class="stage">
         <div class="camera-frame">
-          <!-- Fake camera background -->
         <video id="camera" autoplay playsinline muted></video>
           <!-- AR overlay layer -->
           <div class="overlay">
@@ -27,8 +26,7 @@
           </div>
         </div>
       </section>
-
-
     </main>
+    <script src="main.js"></script>
   </body>
 </html>

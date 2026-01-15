@@ -88,3 +88,13 @@ body {
   pointer-events: none;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
 }
+
+#camera {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  /* selfie view like FaceTime */
+  transform: scaleX(-1);
+}
