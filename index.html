@@ -5,28 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boxing Gloves AR</title>
     <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+
   </head>
 
   <body>
     <main class="app">
-
-      <!-- Top UI -->
       <header class="topbar">
         <div class="app-title">🥊 Boxing Gloves AR</div>
         <div class="app-status" id="status">Idle</div>
       </header>
 
-      <!-- AR Stage -->
       <section class="stage">
-        <div class="camera-frame">
-        <video id="camera" autoplay playsinline muted></video>
-          <!-- AR overlay layer -->
-          <div class="overlay">
-            <!-- Gloves / effects will go here later -->
-          </div>
+        <div class="camera-frame" id="frame">
+          <video id="camera" autoplay playsinline muted></video>
+
+            <div class="overlay" id="overlay">
+                <canvas id="overlayCanvas"></canvas>
+            </div>
         </div>
       </section>
     </main>
-    <script src="main.js"></script>
+
+    <script type="module" src="main.js"></script>
   </body>
 </html>
